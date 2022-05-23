@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ณัฐวุฒิ แซ่ฟุ้ง -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07-js-Number</title>
+</head>
+<body>
+     Number : <Input type="text" name="num1" id="num1" style="width: 50px;">
+    <br><br>
+         Number : <Input type="text" name="num2" id="num2" style="width: 50px;">
+            <br><br>
+            <button style="width: 45px;" onclick="sum()">+</button>
+            <button style="width: 45px;" onclick="minus()">-</button>
+            <button style="width: 45px;" onclick="mutiply()">*</button>
+            <button style="width: 45px;" onclick="divide()">/</button>
+            <br><br>
+            
+            <!-- <p id="output" ></p> -->
+            Ans = <span id="output"></span>
+
+    <script>
+        function sum(paeans){
+            document.getElementById('output').innerHTML= 
+            (Number(document.getElementById('num1').value) +
+            Number(document.getElementById('num2').value))
+        }
+        function minus(paeans){
+            document.getElementById('output').innerHTML= 
+            (Number(document.getElementById('num1').value) -
+            Number(document.getElementById('num2').value))
+        }
+        function mutiply(paeans){
+            document.getElementById('output').innerHTML= 
+            (Number(document.getElementById('num1').value) *
+            Number(document.getElementById('num2').value))
+        }
+        function divide(paeans){
+            document.getElementById('output').innerHTML= 
+            (Number(document.getElementById('num1').value) /
+            Number(document.getElementById('num2').value))
+        }
+        // function divide(paeans){
+        //     document.getElementById('output').innerHTML= "Ans = "+
+        //     (Number(document.getElementById('num1').value) /
+        //     Number(document.getElementById('num2').value))
+        // }
+
+    </script>
+
+</body>
+</html>
