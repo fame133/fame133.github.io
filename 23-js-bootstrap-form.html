@@ -27,7 +27,7 @@
         }
     </style>
 
-    <title>22-js-web-bootstrap</title>
+    <title>23-js-web-bootstrap</title>
 </head>
 <body style="background-image:url(https://newwall.com/wp-content/uploads/2020/09/Speckle_Stellar1.jpg)"></body> 
     
@@ -91,11 +91,13 @@
                     <div class="card-body">
                       <!-- <h5 class="card-title">Card title</h5> -->
                       <p class="card-text">
+                        
+                        
 
                         <form>
                             <div class="form-group">
                               <label for="formGroupSID">รหัส</label>
-                              <input type="text" class="form-control" id="formGroupSID" placeholder="">
+                              <input type="text" class="form-control" id="formGroupSID" placeholder="" >
                             </div>
                             <div class="form-group">
                               <label for="formGroupName">ชื่อ-นามสกุล</label>
@@ -107,7 +109,18 @@
                               </div>
                           </form>
 
-                          <button type="button " class="btn btn-secondary w-20">บันทึก</button>
+                          <script>
+                            
+                            function SID(){
+                              
+                              document.getElementById('bg1').innerHTML='รหัส : '+(document.getElementById('formGroupSID').value)
+                              document.getElementById('bg2').innerHTML='ชื่อ-สกุล : '+(document.getElementById('formGroupName').value)
+                              document.getElementById('bg3').innerHTML='เบอร์โทร : '+(document.getElementById('formGroupPhone').value)
+                            }
+                            
+                          </script>
+
+                          <button type="button " class="btn btn-secondary w-20" onclick="SID()">บันทึก</button>
                       </p>
                       <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                     </div>
@@ -125,7 +138,16 @@
                       <!-- <h5 class="card-title">Card title</h5> -->
                       <p class="card-text">
 
-                        
+                        <div class="alert alert-primary" role="alert" >
+                          <p id="bg1"></p>
+                        </div>
+                        <div class="alert alert-danger" role="alert" >
+                          <p id="bg2"></p>
+                        </div>
+                        <div class="alert alert-warning" role="alert" >
+                          <p id="bg3"></p>
+                        </div>
+
                       </p>
                       <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                     </div>
